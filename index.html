@@ -14,187 +14,253 @@
 <body class="shower list">
 
     <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
+        <h1>SVG-спрайты для иконок</h1>
+        <p>Виктория Васильева</p>
     </header>
 
     <section class="slide" id="cover">
-        <h2>Shower Presentation Engine</h2>
-        <p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
+        <div class="cover-content">
+            <h2 class="">SVG-спрайты для иконок</h2>
+            <p class="cover-mark">Виктория Васильева</p>
+        </div>
         <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+            <img class="cover" src="pictures/icons-bckg2.jpg" alt="icons set">
             <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
+                <a href="http://roundicons.com">© roundicons.com</a>
             </figcaption>
         </figure>
+        <!--img src="./pictures/t-logo.png" width="50" alt="" class="t-logo"-->
         <style>
             #cover h2 {
-                margin: 30px 0 0;
-                color: white;
                 text-align: center;
                 font-size: 70px;
+                color: #000;
             }
 
             #cover p {
                 margin: 10px 0 0;
                 text-align: center;
-                color: white;
-                font-style: italic;
                 font-size: 20px;
             }
 
-            #cover p a {
-                color: white;
+            .cover-content {
+                color: #000;
+                padding: 25px 0 30px;
+                margin-top: 105px;
+            }
+
+            .t-logo {
+                position: absolute;
+                right: 145px;
+                bottom: 20px;
             }
         </style>
     </section>
 
     <section class="slide">
-        <h2>Shower key features</h2>
-        <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
-        </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+        <h2>Способы вставки иконок</h2>
+
+        <ul>
+            <li>тег <code>&lt;img/&gt;</code></li>
+            <li class="next">background-image</li>
+            <li class="next">base64</li>
+            <li class="next">svg-код инлайн</li>
+            <li class="next">иконочный шрифт</li>
+            <li class="next">спрайт</li>
+        </ul>
     </section>
 
     <section class="slide">
-        <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+        <h2>Способы вставки иконок</h2>
+        <table>
+            <tr>
+                <th scope="col"></th>
+                <th>img</th>
+                <th>background</th>
+                <th>base64/data</th>
+                <th>inline svg</th>
+                <th>icon font</th>
+                <th>sprite</th>
+            </tr>
+            <tr class="text-center next">
+                <td scope="col" class="th"><span>скорость загрузки</span></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+            </tr>
+            <tr class="text-center next">
+                <td scope="row" class="th">редактируемость</td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+            </tr>
+            <tr class="text-center next">
+                <td scope="row" class="th">кеширование</td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg><svg class="no"><use xlink:href="#no"></use></svg></td>
+            </tr>
+            <tr class="text-center next">
+                <td scope="row" class="th">переиспользование</td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+            </tr>
+            <tr class="text-center next">
+                <td scope="row" class="th">легкость сборки</td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+            </tr>
+            <tr class="text-center next">
+                <td scope="row" class="th">семантика</td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td></td>
+                <td></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+            </tr>
+        </table>
+
+        <style>
+            th, .th {
+                font-size: 18px;
+                font-weight: 700;
+            }
+            .th {
+                text-align: left;
+            }
+            .no {
+                width: 16px;
+                height: 16px;
+            }
+            .yes {
+                width: 20px;
+                height: 20px;
+            }
+            .text-center, .slide th {
+                text-align: center;
+            }
+        </style>
     </section>
 
     <section class="slide">
-        <h2>Two columns if you like</h2>
-        <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-        </div>
+        <h2>Какие проблемы решает svg-спрайт</h2>
+        <ul>
+            <li>меньше запросов к серверу (или вообще без них)</li>
+            <li>компактный код, легкое переиспользование иконок</li>
+            <li>возможность управлять цветом иконки</li>
+            <li>кеширование</li>
+            <li>семантика</li>
+        </ul>
     </section>
 
     <section class="slide">
-        <h2>All kind of lists</h2>
-        <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
-                <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
-                </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
-        </ol>
+        <h2>Какие проблемы создаёт svg-спрайт</h2>
+        <ul>
+            <li>относительно сложная сборка</li>
+            <li>относительно сложно работать с цветом иконки</li>
+        </ul>
     </section>
 
     <section class="slide">
-        <h2>!!!!!!</h2>
-        <figure>
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
-        </figure>
+        <pre class="smaller-code">
+             <code><mark class="important">&lt;svg</mark> width="0" height="0" style="display: none;"></code>
+             <code>  <mark>&lt;symbol id="loupe" viewBox="0 0 15.7188 15.7188"&gt;</mark></code>
+             <code>    &lt;title&gt;loupe&lt;/title&gt;</code>
+             <code>    &lt;path d="M6 12a6 6 0 1 1 6-6 6.007 6.007 0 0 1-6 6zM6 ...</code>
+             <code>  <mark>&lt;/symbol&gt;</mark></code>
+             <code>  <mark>&lt;symbol id="tick" viewBox="0 0 7.707 5.8535"&gt;</mark></code>
+			 <code>    &lt;title&gt;tick&lt;/title&gt;</code>
+             <code>    &lt;path d="M2.353 5.854A.498.498 0 0 1 2 5.707l-2-2L.707 ...</code>
+		     <code>  <mark>&lt;/symbol&gt;</mark></code>
+             <code><mark class="important">&lt;/svg&gt;</mark></code>
+        </pre>
+
+        <style>
+            .smaller-code {
+                font-size: 20px;
+            }
+        </style>
     </section>
 
     <section class="slide">
-        <h2>Code samples</h2>
+        <br>
+        <br>
         <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
+             <code>&lt;svg width="16" height="16" class="custom-icon"&gt;</code>
+             <code>  <mark>&lt;use xlink:href="#tick"&gt;&lt;/use&gt;</mark></code>
+             <code>&lt;/svg&gt;</code>
+
+             <code>&lt;svg width="16" height="16" class="custom-icon"&gt;</code>
+             <code>  <mark>&lt;use xlink:href="icons.svg#tick"&gt;&lt;/use&gt;</mark></code>
+             <code>&lt;/svg&gt;</code>
         </pre>
     </section>
 
     <section class="slide">
-        <h2>Even tables</h2>
-        <table>
-        <tr>
-            <th scope="col">Locavore</th>
-            <th>Umami</th>
-            <th>Helvetica</th>
-            <th>Vegan</th>
-        </tr>
-        <tr>
-            <th scope="row">Fingerstache</th>
-            <td>Kale</td>
-            <td>Chips</td>
-            <td>Keytar</td>
-        </tr>
-        <tr>
-            <th scope="row">Sriracha</th>
-            <td>Gluten-free</td>
-            <td>Ennui</td>
-            <td>Keffiyeh</td>
-        </tr>
-        <tr>
-            <th scope="row">Thundercats</th>
-            <td>Jean</td>
-            <td>Shorts</td>
-            <td>Biodiesel</td>
-        </tr>
-        <tr>
-            <th scope="row">Terry</th>
-            <td>Richardson</td>
-            <td>Swag</td>
-            <td>Blog</td>
-        </tr>
-        </table>
-        <p>It’s good to have information organized.</p>
-    </section>
-
-    <section class="slide" id="picture">
-        <h2>Pictures</h2>
-        <figure>
-            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
-            </figcaption>
-        </figure>
-        <style>
-            #picture h2 {
-                color: white;
-            }
-        </style>
+        <h2>Shadow DOM</h2>
+        <img src="./pictures/shadowroot.jpg" width="900" alt="Shadow DOM">
     </section>
 
     <section class="slide">
-        <h2 class="shout shrink">You can even shout this way</h2>
+        <h2>Shadow DOM</h2>
+        <div style="text-align: center;">
+            <img src="./pictures/shadowdom.png" width="470" alt="Shadow DOM">
+        </div>
     </section>
 
     <section class="slide">
-        <h2>Inner navigation</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
+        <h2>Сборка спрайта - общий принцип</h2>
+
     </section>
 
-    <section class="slide" id="see-more">
-        <h2 class="shout">
-            <img src="pictures/logo.svg" alt="Shower logo">
-            <a href="https://github.com/shower/shower">See more on GitHub</a>
-        </h2>
-        <style>
-            #see-more h2 {
-                font-size: 100px
-            }
+    <section class="slide">
+        <h2>Плагины</h2>
+        <ul>
+            <li>Предобработка: <a href="https://github.com/svg/svgo">SVGO</a></li>
+            <li>Webpack: <a href="https://github.com/kisenka/svg-sprite-loader">svg-sprite-loader</a></li>
+            <li>Gulp: <a href="https://github.com/jkphl/gulp-svg-sprite">gulp-svg-sprite</a></li>
+            <li>Vue CLI: <a href="https://github.com/swisnl/vue-cli-plugin-svg-sprite">vue-cli-plugin-svg-sprite</a></li>
+            <li>Полифилл: <a href="https://github.com/jonathantneal/svg4everybody">svg4everybody</a></li>
+        </ul>
+    </section>
 
-            #see-more img {
-                width: 0.72em;
-                height: 0.72em;
-            }
-        </style>
+    <section class="slide">
+        <h2>Работа с цветом</h2>
+        
+        <ul>
+            <li>удалить атрибуты цвета (fill/stroke) из кода иконки</li>
+            <li>глобальный inherit</li>
+            <li>currentColor</li>
+            <li>CSS переменные</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2 class="" style="text-align: center">Спасибо! Вопросы?</h2>
+        <p>
+            <img src="./pictures/telegram.svg" width="30" alt=""> viktoria_v
+        </p>
+        <p>
+            <img src="./pictures/mail.svg" width="30" alt=""> Viktoriia.Vasileva@t-systems.com
+        </p>
     </section>
 
     <footer class="badge">
@@ -206,5 +272,17 @@
     <script src="shower/shower.min.js"></script>
     <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
 
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" display="none">
+        <symbol id="yes" viewBox="0 0 26 26">
+            <title>yes</title>
+            <path fill="green" d="M.3 14c-.2-.2-.3-.5-.3-.7s.1-.5.3-.7l1.4-1.4c.4-.4 1-.4 1.4 0l.1.1 5.5 5.9c.2.2.5.2.7 0L22.8 3.3h.1c.4-.4 1-.4 1.4 0l1.4 1.4c.4.4.4 1 0 1.4l-16 16.6c-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3L.5 14.3.3 14z"/>
+        </symbol>
+        <symbol id="no" viewBox="0 0 47.971 47.971">
+            <title>no</title>
+            <path fill="red" d="M28.228 23.986L47.092 5.122a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 1 0 4.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 0 0 0-4.242L28.228 23.986z"/>
+        </symbol>
+    </svg>
 </body>
 </html>
