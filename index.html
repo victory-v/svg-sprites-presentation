@@ -71,115 +71,6 @@
     </section>
 
     <section class="slide">
-        <h2>Способы вставки иконок</h2>
-        <table>
-            <tr>
-                <th scope="col"></th>
-                <th>img</th>
-                <th>background</th>
-                <th>base64/data</th>
-                <th>inline svg</th>
-                <th>icon font</th>
-                <th>sprite</th>
-            </tr>
-            <tr class="text-center next">
-                <td scope="col" class="th"><span>скорость загрузки</span></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-            </tr>
-            <tr class="text-center next">
-                <td scope="row" class="th">редактируемость</td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-            </tr>
-            <tr class="text-center next">
-                <td scope="row" class="th">кеширование</td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg><svg class="no"><use xlink:href="#no"></use></svg></td>
-            </tr>
-            <tr class="text-center next">
-                <td scope="row" class="th">переиспользование</td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-            </tr>
-            <tr class="text-center next">
-                <td scope="row" class="th">легкость сборки</td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-            </tr>
-            <tr class="text-center next">
-                <td scope="row" class="th">семантика</td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td></td>
-                <td></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-            </tr>
-        </table>
-
-        <style>
-            th, .th {
-                font-size: 18px;
-                font-weight: 700;
-            }
-            .th {
-                text-align: left;
-            }
-            .no {
-                width: 16px;
-                height: 16px;
-            }
-            .yes {
-                width: 20px;
-                height: 20px;
-            }
-            .text-center, .slide th {
-                text-align: center;
-            }
-        </style>
-    </section>
-
-    <section class="slide">
-        <h2>Какие проблемы решает svg-спрайт</h2>
-        <ul>
-            <li>меньше запросов к серверу (или вообще без них)</li>
-            <li>компактный код, легкое переиспользование иконок</li>
-            <li>возможность управлять цветом иконки</li>
-            <li>кеширование</li>
-            <li>семантика</li>
-        </ul>
-    </section>
-
-    <section class="slide">
-        <h2>Какие проблемы создаёт svg-спрайт</h2>
-        <ul>
-            <li>относительно сложная сборка</li>
-            <li>относительно сложно работать с цветом иконки</li>
-        </ul>
-    </section>
-
-    <section class="slide">
         <pre class="smaller-code">
              <code><mark class="important">&lt;svg</mark> width="0" height="0" style="display: none;"></code>
              <code>  <mark>&lt;symbol id="loupe" viewBox="0 0 15.7188 15.7188"&gt;</mark></code>
@@ -202,12 +93,11 @@
 
     <section class="slide">
         <br>
-        <br>
         <pre>
              <code>&lt;svg width="16" height="16" class="custom-icon"&gt;</code>
              <code>  <mark>&lt;use xlink:href="#tick"&gt;&lt;/use&gt;</mark></code>
              <code>&lt;/svg&gt;</code>
-
+             <code><br></code>
              <code>&lt;svg width="16" height="16" class="custom-icon"&gt;</code>
              <code>  <mark>&lt;use xlink:href="icons.svg#tick"&gt;&lt;/use&gt;</mark></code>
              <code>&lt;/svg&gt;</code>
@@ -215,26 +105,34 @@
     </section>
 
     <section class="slide">
-        <h2>Shadow DOM</h2>
-        <img src="./pictures/shadowroot.jpg" width="900" alt="Shadow DOM">
+        <br>
+        <br>
+        <img src="./pictures/shadow-dom.jpg" width="900" alt="Shadow DOM">
+        <span class="next shadow-dom-label">Shadow<br>DOM</span>
+
+        <style>
+            .shadow-dom-label {
+                position: absolute;
+                left: 50px;
+                bottom: 235px;
+                line-height: 1.1;
+                font-size: 24px;
+                text-align: right;
+                font-weight: 700;
+                color: red;
+            }
+        </style>
     </section>
 
     <section class="slide">
-        <h2>Shadow DOM</h2>
-        <div style="text-align: center;">
-            <img src="./pictures/shadowdom.png" width="470" alt="Shadow DOM">
-        </div>
-    </section>
-
-    <section class="slide">
-        <h2>Работа с цветом</h2>
-
-        <ul>
-            <li>удалить атрибуты цвета (fill/stroke) из кода иконки</li>
-            <li>глобальный inherit</li>
-            <li>currentColor</li>
-            <li>CSS переменные</li>
-        </ul>
+        <br>
+        <pre>
+            <code>&lt;path <mark>stroke</mark>="#f41" ...</code>
+             <code><br></code>
+			<code>&lt;path <mark>fill</mark>="#f41" ...</code>
+             <code><br></code>
+			<code>&lt;path style="<mark>fill</mark>: #f41; <mark>stroke</mark>: #f41;" ...</code>
+        </pre>
     </section>
 
     <section class="slide">
@@ -242,20 +140,48 @@
 
         <div class="columns two">
             <div>
-                <img src="./pictures/stroke.jpg" alt="пример иконки-линии" width="200">
-                <div>линия</div>
+                <img src="./pictures/arrow-stroke.jpg" alt="пример иконки-линии" width="300">
+                <div class="center">линия - stroke</div>
             </div>
             <div>
-                <img src="./pictures/fill.jpg" alt="пример иконки-формы" width="200">
-                <div>форма</div>
+                <img src="./pictures/arrow-fill.jpg" alt="пример иконки-формы" width="300">
+                <div class="center">форма - fill</div>
             </div>
         </div>
 
+        <style>
+            .center {
+                text-align: center;
+            }
+        </style>
     </section>
 
     <section class="slide">
-        <h2>Сборка спрайта - общий принцип</h2>
+        <br>
+        <div class="center" style="position:relative;">
+            <img src="./pictures/trash.svg" width="300" alt="">
+            <div style="position:absolute;left: 390px;top:100px;">FILL</div>
+            <div style="position:absolute;left: 375px;top:150px;">STROKE</div>
+        </div>
+    </section>
 
+    <section class="slide">
+        <h2>Какие проблемы решает svg-спрайт</h2>
+        <ul>
+            <li>меньше запросов к серверу (или вообще без них)</li>
+            <li>компактный код, легкое переиспользование иконок</li>
+            <li>возможность управлять цветом иконки</li>
+            <li>кеширование</li>
+            <li>семантика</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Какие проблемы создаёт svg-спрайт</h2>
+        <ul>
+            <li>относительно сложная сборка</li>
+            <li>относительно сложно работать с цветом иконки</li>
+        </ul>
     </section>
 
     <section class="slide">
