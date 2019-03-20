@@ -60,14 +60,91 @@
     <section class="slide">
         <h2>Способы вставки иконок</h2>
 
-        <ul>
-            <li>тег <code>&lt;img/&gt;</code></li>
-            <li class="next">background-image</li>
-            <li class="next">base64</li>
-            <li class="next">svg-код инлайн</li>
-            <li class="next">иконочный шрифт</li>
-            <li class="next">спрайт</li>
-        </ul>
+        <table>
+            <tr>
+                <th scope="col"></th>
+                <th>img</th>
+                <th>background</th>
+                <th>base64/data</th>
+                <th>inline svg</th>
+                <th>icon font</th>
+                <th>sprite</th>
+            </tr>
+            <tr class="text-center next">
+                <td scope="col" class="th"><span>скорость загрузки</span></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+            </tr>
+            <tr class="text-center next">
+                <td scope="row" class="th">редактируемость</td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+            </tr>
+            <tr class="text-center next">
+                <td scope="row" class="th">кеширование</td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg><svg class="no"><use xlink:href="#no"></use></svg></td>
+            </tr>
+            <tr class="text-center next">
+                <td scope="row" class="th">переиспользование</td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+            </tr>
+            <tr class="text-center next">
+                <td scope="row" class="th">легкость сборки</td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+            </tr>
+            <tr class="text-center next">
+                <td scope="row" class="th">релевантность</td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td></td>
+                <td></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
+                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
+            </tr>
+        </table>
+        <style>
+            th, .th {
+                font-size: 18px;
+                font-weight: 700;
+            }
+            .th {
+                text-align: left;
+            }
+            .no {
+                width: 16px;
+                height: 16px;
+            }
+            .yes {
+                width: 20px;
+                height: 20px;
+            }
+            .text-center, .slide th {
+                text-align: center;
+            }
+        </style>
     </section>
 
     <section class="slide">
@@ -119,19 +196,19 @@
                 font-size: 24px;
                 text-align: right;
                 font-weight: 700;
-                color: red;
+                color: #e2574c;
             }
         </style>
     </section>
 
     <section class="slide">
-        <br>
+        <h2>Как задать цвет</h2>
         <pre>
-            <code>&lt;path <mark>stroke</mark>="#f41" ...</code>
+            <code>&lt;path <mark>stroke</mark>="#f41" ... /&gt;</code>
              <code><br></code>
-			<code>&lt;path <mark>fill</mark>="#f41" ...</code>
+			<code>&lt;path <mark>fill</mark>="#f41" ... /&gt;</code>
              <code><br></code>
-			<code>&lt;path style="<mark>fill</mark>: #f41; <mark>stroke</mark>: #f41;" ...</code>
+			<code>&lt;path style="<mark>fill</mark>: #f41; <mark>stroke</mark>: #f41;" ... /&gt;</code>
         </pre>
     </section>
 
@@ -157,12 +234,83 @@
     </section>
 
     <section class="slide">
-        <br>
+        <h2>inherit</h2>
+
+        <pre>
+            <code><mark>path</mark> {</code>
+            <code>  fill: <mark>inherit</mark>;</code>
+            <code>  stroke: <mark>inherit</mark>;</code>
+            <code>}</code>
+        </pre>
+        <p class="alert-message"><svg width="30" height="30"><use xlink:href="#alert"></use></svg> Только глобально</p>
+
+        <style>
+            .alert-message {
+                display: flex;
+                align-items: center;
+                color: #e2574c;
+                font-weight: 700;
+            }
+            .alert-message svg {
+                margin-right: 10px;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>currentColor</h2>
+
+        <pre>
+            <code>&lt;path <mark>fill="currentColor"</mark> ... /&gt;</code>
+            <code><br></code>
+            <code>svg {</code>
+            <code>  <mark>color</mark>: #f41;</code>
+            <code>}</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Нативные CSS-переменные</h2>
+
+        <pre class="smaller-code">
+            <code>&lt;path <mark>fill="var(--pathColor)"</mark> ... /&gt;</code>
+            <code><br></code>
+            <code>svg {</code>
+            <code>  --pathColor: #f41;</code>
+            <code>}</code>
+            <code>svg:hover {</code>
+            <code>  --pathColor: #000;</code>
+            <code>}</code>
+        </pre>
+        <p class="alert-message"><svg width="30" height="30"><use xlink:href="#alert"></use></svg> Не анимируется</p>
+    </section>
+
+    <section class="slide">
+        <h2>Или</h2>
         <div class="center" style="position:relative;">
             <img src="./pictures/trash.svg" width="300" alt="">
-            <div style="position:absolute;left: 390px;top:100px;">FILL</div>
-            <div style="position:absolute;left: 375px;top:150px;">STROKE</div>
+            <div class="fill">fill</div>
+            <div class="stroke">stroke</div>
         </div>
+
+        <style>
+            .fill, .stroke {
+                position: absolute;
+                font-weight: 700;
+                font-size: 36px;
+                color: #e2574c;
+            }
+
+            .fill {
+                left: 390px;
+                top: 100px;
+            }
+
+            .stroke {
+                left: 375px;
+                top: 140px;
+            }
+        </style>
     </section>
 
     <section class="slide">
@@ -223,6 +371,9 @@
         <symbol id="no" viewBox="0 0 47.971 47.971">
             <title>no</title>
             <path fill="red" d="M28.228 23.986L47.092 5.122a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 1 0 4.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 0 0 0-4.242L28.228 23.986z"/>
+        </symbol>
+        <symbol id="alert" viewBox="0 0 286.054 286.054">
+            <path d="M143.027 0C64.04 0 0 64.04 0 143.027c0 78.996 64.04 143.027 143.027 143.027 78.996 0 143.027-64.022 143.027-143.027C286.054 64.04 222.022 0 143.027 0zm0 259.236c-64.183 0-116.209-52.026-116.209-116.209S78.844 26.818 143.027 26.818s116.209 52.026 116.209 116.209-52.026 116.209-116.209 116.209zm.009-196.51c-10.244 0-17.995 5.346-17.995 13.981v79.201c0 8.644 7.75 13.972 17.995 13.972 9.994 0 17.995-5.551 17.995-13.972V76.707c-.001-8.43-8.001-13.981-17.995-13.981zm0 124.997c-9.842 0-17.852 8.01-17.852 17.86 0 9.833 8.01 17.843 17.852 17.843s17.843-8.01 17.843-17.843c-.001-9.851-8.001-17.86-17.843-17.86z" fill="#e2574c"/>
         </symbol>
     </svg>
 </body>
