@@ -13,266 +13,408 @@
 </head>
 <body class="shower list">
 
-    <header class="caption">
-        <h1>SVG-спрайты для иконок</h1>
-        <p>Виктория Васильева</p>
-    </header>
+<header class="caption">
+    <h1>SVG-спрайты для иконок</h1>
+    <p>Виктория Васильева</p>
+</header>
 
-    <section class="slide" id="cover">
-        <div class="cover-content">
-            <h2 class="">SVG-спрайты для иконок</h2>
-            <p class="cover-mark">Виктория Васильева</p>
+<section class="slide" id="cover">
+    <div class="cover-content">
+        <h2 class="">SVG-спрайты для иконок</h2>
+        <p class="cover-mark">Виктория Васильева</p>
+    </div>
+    <figure>
+        <img class="cover" src="pictures/icons-bckg2.jpg" alt="icons set">
+        <figcaption class="copyright right white">
+            <a href="http://roundicons.com">© roundicons.com</a>
+        </figcaption>
+    </figure>
+
+    <style>
+        #cover h2 {
+            text-align: center;
+            font-size: 70px;
+            color: #000;
+        }
+
+        #cover p {
+            margin: 10px 0 0;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .cover-content {
+            color: #000;
+            padding: 25px 0 30px;
+            margin-top: 105px;
+        }
+    </style>
+</section>
+
+<section class="slide">
+    <h2>Способы вставки иконок</h2>
+
+    <table>
+        <tr>
+            <th scope="col"></th>
+            <th>img</th>
+            <th>background</th>
+            <th>base64/data</th>
+            <th>inline svg</th>
+            <th>icon font</th>
+            <th>sprite</th>
+        </tr>
+        <tr class="text-center next">
+            <td scope="col" class="th"><span>скорость загрузки</span></td>
+            <td>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+        </tr>
+        <tr class="text-center next">
+            <td scope="row" class="th">редактируемость</td>
+            <td>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+        </tr>
+        <tr class="text-center next">
+            <td scope="row" class="th">кеширование</td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+        </tr>
+        <tr class="text-center next">
+            <td scope="row" class="th">переиспользование</td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+        </tr>
+        <tr class="text-center next">
+            <td scope="row" class="th">легкость сборки</td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+        </tr>
+        <tr class="text-center next">
+            <td scope="row" class="th">релевантность</td>
+            <td>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+        </tr>
+    </table>
+    <style>
+        th, .th {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .th {
+            text-align: left;
+        }
+
+        .no {
+            width: 16px;
+            height: 16px;
+        }
+
+        .yes {
+            width: 20px;
+            height: 20px;
+        }
+
+        .text-center, .slide th {
+            text-align: center;
+        }
+    </style>
+</section>
+
+<section class="slide">
+    <pre class="smaller-code">
+         <code><mark class="important">&lt;svg</mark> width="0" height="0" style="display: none;"></code>
+         <code>  <mark>&lt;symbol id="loupe" viewBox="0 0 15.7188 15.7188"&gt;</mark></code>
+         <code>    &lt;title&gt;loupe&lt;/title&gt;</code>
+         <code>    &lt;path d="M6 12a6 6 0 1 1 6-6 6.007 6.007 0 0 1-6 6zM6 ...</code>
+         <code>  <mark>&lt;/symbol&gt;</mark></code>
+         <code>  <mark>&lt;symbol id="tick" viewBox="0 0 7.707 5.8535"&gt;</mark></code>
+         <code>    &lt;title&gt;tick&lt;/title&gt;</code>
+         <code>    &lt;path d="M2.353 5.854A.498.498 0 0 1 2 5.707l-2-2L.707 ...</code>
+         <code>  <mark>&lt;/symbol&gt;</mark></code>
+         <code><mark class="important">&lt;/svg&gt;</mark></code>
+    </pre>
+
+    <style>
+        .smaller-code {
+            font-size: 20px;
+        }
+    </style>
+</section>
+
+<section class="slide">
+    <br>
+    <pre>
+         <code>&lt;svg width="16" height="16" class="custom-icon"&gt;</code>
+         <code>  <mark>&lt;use xlink:href="#tick"&gt;&lt;/use&gt;</mark></code>
+         <code>&lt;/svg&gt;</code>
+         <code><br></code>
+         <code>&lt;svg width="16" height="16" class="custom-icon"&gt;</code>
+         <code>  <mark>&lt;use xlink:href="icons.svg#tick"&gt;&lt;/use&gt;</mark></code>
+         <code>&lt;/svg&gt;</code>
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>В браузере</h2>
+    <img src="./pictures/shadow-dom.jpg" width="900" alt="Shadow DOM">
+    <span class="next shadow-dom-label">Shadow<br>DOM</span>
+
+    <style>
+        .shadow-dom-label {
+            position: absolute;
+            left: 50px;
+            bottom: 235px;
+            line-height: 1.1;
+            font-size: 24px;
+            text-align: right;
+            font-weight: 700;
+            color: #e2574c;
+        }
+    </style>
+</section>
+
+<section class="slide">
+    <h2>Как задать цвет</h2>
+    <pre>
+        <code>&lt;path <mark>stroke</mark>="#f41" ... /&gt;</code>
+         <code><br></code>
+        <code>&lt;path <mark>fill</mark>="#f41" ... /&gt;</code>
+         <code><br></code>
+        <code>&lt;path style="<mark>fill</mark>: #f41; <mark>stroke</mark>: #f41;" ... /&gt;</code>
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Stroke vs Fill</h2>
+
+    <div class="columns two">
+        <div>
+            <img src="./pictures/arrow-stroke.jpg" alt="пример иконки-линии" width="300">
+            <div class="center">линия - stroke</div>
         </div>
-        <figure>
-            <img class="cover" src="pictures/icons-bckg2.jpg" alt="icons set">
-            <figcaption class="copyright right white">
-                <a href="http://roundicons.com">© roundicons.com</a>
-            </figcaption>
-        </figure>
-        <!--img src="./pictures/t-logo.png" width="50" alt="" class="t-logo"-->
-        <style>
-            #cover h2 {
-                text-align: center;
-                font-size: 70px;
-                color: #000;
-            }
-
-            #cover p {
-                margin: 10px 0 0;
-                text-align: center;
-                font-size: 20px;
-            }
-
-            .cover-content {
-                color: #000;
-                padding: 25px 0 30px;
-                margin-top: 105px;
-            }
-
-            .t-logo {
-                position: absolute;
-                right: 145px;
-                bottom: 20px;
-            }
-        </style>
-    </section>
-
-    <section class="slide">
-        <h2>Способы вставки иконок</h2>
-
-        <table>
-            <tr>
-                <th scope="col"></th>
-                <th>img</th>
-                <th>background</th>
-                <th>base64/data</th>
-                <th>inline svg</th>
-                <th>icon font</th>
-                <th>sprite</th>
-            </tr>
-            <tr class="text-center next">
-                <td scope="col" class="th"><span>скорость загрузки</span></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-            </tr>
-            <tr class="text-center next">
-                <td scope="row" class="th">редактируемость</td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-            </tr>
-            <tr class="text-center next">
-                <td scope="row" class="th">кеширование</td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg><svg class="no"><use xlink:href="#no"></use></svg></td>
-            </tr>
-            <tr class="text-center next">
-                <td scope="row" class="th">переиспользование</td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-            </tr>
-            <tr class="text-center next">
-                <td scope="row" class="th">легкость сборки</td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-            </tr>
-            <tr class="text-center next">
-                <td scope="row" class="th">релевантность</td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td></td>
-                <td></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-                <td><svg class="no"><use xlink:href="#no"></use></svg></td>
-                <td><svg class="yes"><use xlink:href="#yes"></use></svg></td>
-            </tr>
-        </table>
-        <style>
-            th, .th {
-                font-size: 18px;
-                font-weight: 700;
-            }
-            .th {
-                text-align: left;
-            }
-            .no {
-                width: 16px;
-                height: 16px;
-            }
-            .yes {
-                width: 20px;
-                height: 20px;
-            }
-            .text-center, .slide th {
-                text-align: center;
-            }
-        </style>
-    </section>
-
-    <section class="slide">
-        <pre class="smaller-code">
-             <code><mark class="important">&lt;svg</mark> width="0" height="0" style="display: none;"></code>
-             <code>  <mark>&lt;symbol id="loupe" viewBox="0 0 15.7188 15.7188"&gt;</mark></code>
-             <code>    &lt;title&gt;loupe&lt;/title&gt;</code>
-             <code>    &lt;path d="M6 12a6 6 0 1 1 6-6 6.007 6.007 0 0 1-6 6zM6 ...</code>
-             <code>  <mark>&lt;/symbol&gt;</mark></code>
-             <code>  <mark>&lt;symbol id="tick" viewBox="0 0 7.707 5.8535"&gt;</mark></code>
-			 <code>    &lt;title&gt;tick&lt;/title&gt;</code>
-             <code>    &lt;path d="M2.353 5.854A.498.498 0 0 1 2 5.707l-2-2L.707 ...</code>
-		     <code>  <mark>&lt;/symbol&gt;</mark></code>
-             <code><mark class="important">&lt;/svg&gt;</mark></code>
-        </pre>
-
-        <style>
-            .smaller-code {
-                font-size: 20px;
-            }
-        </style>
-    </section>
-
-    <section class="slide">
-        <br>
-        <pre>
-             <code>&lt;svg width="16" height="16" class="custom-icon"&gt;</code>
-             <code>  <mark>&lt;use xlink:href="#tick"&gt;&lt;/use&gt;</mark></code>
-             <code>&lt;/svg&gt;</code>
-             <code><br></code>
-             <code>&lt;svg width="16" height="16" class="custom-icon"&gt;</code>
-             <code>  <mark>&lt;use xlink:href="icons.svg#tick"&gt;&lt;/use&gt;</mark></code>
-             <code>&lt;/svg&gt;</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <br>
-        <br>
-        <img src="./pictures/shadow-dom.jpg" width="900" alt="Shadow DOM">
-        <span class="next shadow-dom-label">Shadow<br>DOM</span>
-
-        <style>
-            .shadow-dom-label {
-                position: absolute;
-                left: 50px;
-                bottom: 235px;
-                line-height: 1.1;
-                font-size: 24px;
-                text-align: right;
-                font-weight: 700;
-                color: #e2574c;
-            }
-        </style>
-    </section>
-
-    <section class="slide">
-        <h2>Как задать цвет</h2>
-        <pre>
-            <code>&lt;path <mark>stroke</mark>="#f41" ... /&gt;</code>
-             <code><br></code>
-			<code>&lt;path <mark>fill</mark>="#f41" ... /&gt;</code>
-             <code><br></code>
-			<code>&lt;path style="<mark>fill</mark>: #f41; <mark>stroke</mark>: #f41;" ... /&gt;</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>Stroke vs Fill</h2>
-
-        <div class="columns two">
-            <div>
-                <img src="./pictures/arrow-stroke.jpg" alt="пример иконки-линии" width="300">
-                <div class="center">линия - stroke</div>
-            </div>
-            <div>
-                <img src="./pictures/arrow-fill.jpg" alt="пример иконки-формы" width="300">
-                <div class="center">форма - fill</div>
-            </div>
+        <div>
+            <img src="./pictures/arrow-fill.jpg" alt="пример иконки-формы" width="300">
+            <div class="center">форма - fill</div>
         </div>
+    </div>
 
-        <style>
-            .center {
-                text-align: center;
-            }
-        </style>
-    </section>
+    <style>
+        .center {
+            text-align: center;
+        }
+    </style>
+</section>
 
-    <section class="slide">
-        <h2>inherit</h2>
+<section class="slide">
+    <h2>inherit</h2>
 
-        <pre>
-            <code><mark>path</mark> {</code>
-            <code>  fill: <mark>inherit</mark>;</code>
-            <code>  stroke: <mark>inherit</mark>;</code>
-            <code>}</code>
-        </pre>
-        <p class="alert-message"><svg width="30" height="30"><use xlink:href="#alert"></use></svg> Только глобально</p>
+    <pre>
+        <code><mark>path</mark> {</code>
+        <code>  fill: <mark>inherit</mark>;</code>
+        <code>  stroke: <mark>inherit</mark>;</code>
+        <code>}</code>
+    </pre>
+    <p class="alert-message">
+        <svg width="30" height="30">
+            <use xlink:href="#alert"></use>
+        </svg>
+        Только глобально
+    </p>
 
-        <style>
-            .alert-message {
-                display: flex;
-                align-items: center;
-                color: #e2574c;
-                font-weight: 700;
-            }
-            .alert-message svg {
-                margin-right: 10px;
-            }
-        </style>
-    </section>
+    <style>
+        .alert-message {
+            display: flex;
+            align-items: center;
+            color: #e2574c;
+            font-weight: 700;
+        }
 
-    <section class="slide">
-        <h2>currentColor</h2>
+        .alert-message svg {
+            margin-right: 10px;
+        }
+    </style>
+</section>
 
-        <pre>
+<section class="slide">
+    <h2>currentColor</h2>
+
+    <pre>
             <code>&lt;path <mark>fill="currentColor"</mark> ... /&gt;</code>
             <code><br></code>
             <code>svg {</code>
             <code>  <mark>color</mark>: #f41;</code>
             <code>}</code>
         </pre>
-    </section>
+</section>
 
-    <section class="slide">
-        <h2>Нативные CSS-переменные</h2>
+<section class="slide">
+    <h2>Нативные CSS-переменные</h2>
 
-        <pre class="smaller-code">
+    <pre class="smaller-code">
             <code>&lt;path <mark>fill="var(--pathColor)"</mark> ... /&gt;</code>
             <code><br></code>
             <code>svg {</code>
@@ -282,99 +424,106 @@
             <code>  --pathColor: #000;</code>
             <code>}</code>
         </pre>
-        <p class="alert-message"><svg width="30" height="30"><use xlink:href="#alert"></use></svg> Не анимируется</p>
-    </section>
+    <p class="alert-message">
+        <svg width="30" height="30">
+            <use xlink:href="#alert"></use>
+        </svg>
+        Не анимируется
+    </p>
+</section>
 
-    <section class="slide">
-        <h2>Или</h2>
-        <div class="center" style="position:relative;">
-            <img src="./pictures/trash.svg" width="300" alt="">
-            <div class="fill">fill</div>
-            <div class="stroke">stroke</div>
-        </div>
+<section class="slide">
+    <h2>Или</h2>
+    <div class="center" style="position:relative;">
+        <img src="./pictures/trash.svg" width="300" alt="">
+        <div class="fill">fill</div>
+        <div class="stroke">stroke</div>
+    </div>
 
-        <style>
-            .fill, .stroke {
-                position: absolute;
-                font-weight: 700;
-                font-size: 36px;
-                color: #e2574c;
-            }
+    <style>
+        .fill, .stroke {
+            position: absolute;
+            font-weight: 700;
+            font-size: 36px;
+            color: #e2574c;
+        }
 
-            .fill {
-                left: 390px;
-                top: 100px;
-            }
+        .fill {
+            left: 390px;
+            top: 100px;
+        }
 
-            .stroke {
-                left: 375px;
-                top: 140px;
-            }
-        </style>
-    </section>
+        .stroke {
+            left: 375px;
+            top: 140px;
+        }
+    </style>
+</section>
 
-    <section class="slide">
-        <h2>Какие проблемы решает svg-спрайт</h2>
-        <ul>
-            <li>меньше запросов к серверу (или вообще без них)</li>
-            <li>компактный код, легкое переиспользование иконок</li>
-            <li>возможность управлять цветом иконки</li>
-            <li>кеширование</li>
-            <li>семантика</li>
-        </ul>
-    </section>
+<section class="slide">
+    <h2>Какие проблемы решает svg-спрайт</h2>
+    <ul>
+        <li>меньше запросов к серверу (или вообще без них)</li>
+        <li>компактный код, легкое переиспользование иконок</li>
+        <li>возможность управлять цветом иконки</li>
+        <li>кеширование</li>
+        <li>семантика</li>
+    </ul>
+</section>
 
-    <section class="slide">
-        <h2>Какие проблемы создаёт svg-спрайт</h2>
-        <ul>
-            <li>относительно сложная сборка</li>
-            <li>относительно сложно работать с цветом иконки</li>
-        </ul>
-    </section>
+<section class="slide">
+    <h2>Какие проблемы создаёт svg-спрайт</h2>
+    <ul>
+        <li>сложная сборка</li>
+        <li>ограничения по работе с цветом иконки</li>
+    </ul>
+</section>
 
-    <section class="slide">
-        <h2>Плагины</h2>
-        <ul>
-            <li>Предобработка: <a href="https://github.com/svg/svgo">SVGO</a></li>
-            <li>Webpack: <a href="https://github.com/kisenka/svg-sprite-loader">svg-sprite-loader</a></li>
-            <li>Gulp: <a href="https://github.com/jkphl/gulp-svg-sprite">gulp-svg-sprite</a></li>
-            <li>Vue CLI: <a href="https://github.com/swisnl/vue-cli-plugin-svg-sprite">vue-cli-plugin-svg-sprite</a></li>
-            <li>Полифилл: <a href="https://github.com/jonathantneal/svg4everybody">svg4everybody</a></li>
-        </ul>
-    </section>
+<section class="slide">
+    <h2>Плагины</h2>
+    <ul>
+        <li>Предобработка: <a href="https://github.com/svg/svgo">SVGO</a></li>
+        <li>Webpack: <a href="https://github.com/kisenka/svg-sprite-loader">svg-sprite-loader</a></li>
+        <li>Gulp: <a href="https://github.com/jkphl/gulp-svg-sprite">gulp-svg-sprite</a></li>
+        <li>Vue CLI: <a href="https://github.com/swisnl/vue-cli-plugin-svg-sprite">vue-cli-plugin-svg-sprite</a></li>
+        <li>Полифилл: <a href="https://github.com/jonathantneal/svg4everybody">svg4everybody</a></li>
+    </ul>
+</section>
 
-    <section class="slide">
-        <h2 class="" style="text-align: center">Спасибо! Вопросы?</h2>
-        <p>
-            Виктория Васильева
-            <br>
-            Viktoriia.Vasileva@t-systems.com
-        </p>
-    </section>
+<section class="slide">
+    <h2 class="" style="text-align: center">Спасибо! Вопросы?</h2>
+    <p>
+        Виктория Васильева
+        <br>
+        Viktoriia.Vasileva@t-systems.com
+    </p>
+</section>
 
-    <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
-    </footer>
+<footer class="badge">
+    <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+</footer>
 
-    <div class="progress"></div>
+<div class="progress"></div>
 
-    <script src="shower/shower.min.js"></script>
-    <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+<script src="shower/shower.min.js"></script>
+<!-- Copyright © 3000 Yours Truly, Famous Inc. -->
 
 
-
-    <svg xmlns="http://www.w3.org/2000/svg" display="none">
-        <symbol id="yes" viewBox="0 0 26 26">
-            <title>yes</title>
-            <path fill="green" d="M.3 14c-.2-.2-.3-.5-.3-.7s.1-.5.3-.7l1.4-1.4c.4-.4 1-.4 1.4 0l.1.1 5.5 5.9c.2.2.5.2.7 0L22.8 3.3h.1c.4-.4 1-.4 1.4 0l1.4 1.4c.4.4.4 1 0 1.4l-16 16.6c-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3L.5 14.3.3 14z"/>
-        </symbol>
-        <symbol id="no" viewBox="0 0 47.971 47.971">
-            <title>no</title>
-            <path fill="red" d="M28.228 23.986L47.092 5.122a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 1 0 4.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 0 0 0-4.242L28.228 23.986z"/>
-        </symbol>
-        <symbol id="alert" viewBox="0 0 286.054 286.054">
-            <path d="M143.027 0C64.04 0 0 64.04 0 143.027c0 78.996 64.04 143.027 143.027 143.027 78.996 0 143.027-64.022 143.027-143.027C286.054 64.04 222.022 0 143.027 0zm0 259.236c-64.183 0-116.209-52.026-116.209-116.209S78.844 26.818 143.027 26.818s116.209 52.026 116.209 116.209-52.026 116.209-116.209 116.209zm.009-196.51c-10.244 0-17.995 5.346-17.995 13.981v79.201c0 8.644 7.75 13.972 17.995 13.972 9.994 0 17.995-5.551 17.995-13.972V76.707c-.001-8.43-8.001-13.981-17.995-13.981zm0 124.997c-9.842 0-17.852 8.01-17.852 17.86 0 9.833 8.01 17.843 17.852 17.843s17.843-8.01 17.843-17.843c-.001-9.851-8.001-17.86-17.843-17.86z" fill="#e2574c"/>
-        </symbol>
-    </svg>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="yes" viewBox="0 0 26 26">
+        <title>yes</title>
+        <path fill="green"
+              d="M.3 14c-.2-.2-.3-.5-.3-.7s.1-.5.3-.7l1.4-1.4c.4-.4 1-.4 1.4 0l.1.1 5.5 5.9c.2.2.5.2.7 0L22.8 3.3h.1c.4-.4 1-.4 1.4 0l1.4 1.4c.4.4.4 1 0 1.4l-16 16.6c-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3L.5 14.3.3 14z"/>
+    </symbol>
+    <symbol id="no" viewBox="0 0 47.971 47.971">
+        <title>no</title>
+        <path fill="red"
+              d="M28.228 23.986L47.092 5.122a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 1 0 4.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 0 0 0-4.242L28.228 23.986z"/>
+    </symbol>
+    <symbol id="alert" viewBox="0 0 286.054 286.054">
+        <path d="M143.027 0C64.04 0 0 64.04 0 143.027c0 78.996 64.04 143.027 143.027 143.027 78.996 0 143.027-64.022 143.027-143.027C286.054 64.04 222.022 0 143.027 0zm0 259.236c-64.183 0-116.209-52.026-116.209-116.209S78.844 26.818 143.027 26.818s116.209 52.026 116.209 116.209-52.026 116.209-116.209 116.209zm.009-196.51c-10.244 0-17.995 5.346-17.995 13.981v79.201c0 8.644 7.75 13.972 17.995 13.972 9.994 0 17.995-5.551 17.995-13.972V76.707c-.001-8.43-8.001-13.981-17.995-13.981zm0 124.997c-9.842 0-17.852 8.01-17.852 17.86 0 9.833 8.01 17.843 17.852 17.843s17.843-8.01 17.843-17.843c-.001-9.851-8.001-17.86-17.843-17.86z"
+              fill="#e2574c"/>
+    </symbol>
+</svg>
 </body>
 </html>
