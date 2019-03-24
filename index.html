@@ -9,6 +9,26 @@
         .shower {
             --slide-ratio: calc(16 / 9);
         }
+
+        /*custom styles*/
+        .alert-message {
+            display: flex;
+            align-items: center;
+            color: #e2574c;
+            font-weight: 700;
+        }
+
+        .alert-message svg {
+            margin-right: 10px;
+        }
+
+        .smaller-code {
+            font-size: 20px;
+        }
+
+        .center {
+            text-align: center;
+        }
     </style>
 </head>
 <body class="shower list">
@@ -25,7 +45,7 @@
     </div>
     <figure>
         <img class="cover" src="pictures/icons-bckg2.jpg" alt="icons set">
-        <figcaption class="copyright right white">
+        <figcaption class="copyright right">
             <a href="http://roundicons.com">© roundicons.com</a>
         </figcaption>
     </figure>
@@ -52,20 +72,20 @@
 </section>
 
 <section class="slide">
-    <h2>Способы вставки иконок</h2>
+    <h2>Способы вставки svg-иконок</h2>
 
     <table>
         <tr>
             <th scope="col"></th>
             <th>img</th>
             <th>background</th>
-            <th>base64/data</th>
+            <th>base64/data URI</th>
             <th>inline svg</th>
             <th>icon font</th>
             <th>sprite</th>
         </tr>
-        <tr class="text-center next">
-            <td scope="col" class="th"><span>скорость загрузки</span></td>
+        <tr class="center">
+            <td scope="col" class="th"><span>оптимизация загрузки</span></td>
             <td>
                 <svg class="no">
                     <use xlink:href="#no"></use>
@@ -97,7 +117,45 @@
                 </svg>
             </td>
         </tr>
-        <tr class="text-center next">
+        <tr class="center">
+            <td scope="row" class="th">кеширование</td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="no">
+                    <use xlink:href="#no"></use>
+                </svg>
+            </td>
+            <td>
+                <svg class="yes">
+                    <use xlink:href="#yes"></use>
+                </svg>
+            </td>
+            <td>
+                <span style="display:inline-flex;align-items: baseline;">
+                    <svg class="yes" style="margin-right: 10px;">
+                        <use xlink:href="#yes"></use>
+                    </svg>
+                    <svg class="no">
+                        <use xlink:href="#no"></use>
+                    </svg>
+                </span>
+            </td>
+        </tr>
+        <tr class="center">
             <td scope="row" class="th">редактируемость</td>
             <td>
                 <svg class="no">
@@ -130,43 +188,7 @@
                 </svg>
             </td>
         </tr>
-        <tr class="text-center next">
-            <td scope="row" class="th">кеширование</td>
-            <td>
-                <svg class="yes">
-                    <use xlink:href="#yes"></use>
-                </svg>
-            </td>
-            <td>
-                <svg class="yes">
-                    <use xlink:href="#yes"></use>
-                </svg>
-            </td>
-            <td>
-                <svg class="no">
-                    <use xlink:href="#no"></use>
-                </svg>
-            </td>
-            <td>
-                <svg class="no">
-                    <use xlink:href="#no"></use>
-                </svg>
-            </td>
-            <td>
-                <svg class="yes">
-                    <use xlink:href="#yes"></use>
-                </svg>
-            </td>
-            <td>
-                <svg class="yes">
-                    <use xlink:href="#yes"></use>
-                </svg>
-                <svg class="no">
-                    <use xlink:href="#no"></use>
-                </svg>
-            </td>
-        </tr>
-        <tr class="text-center next">
+        <tr class="center">
             <td scope="row" class="th">переиспользование</td>
             <td>
                 <svg class="yes">
@@ -199,7 +221,7 @@
                 </svg>
             </td>
         </tr>
-        <tr class="text-center next">
+        <tr class="center">
             <td scope="row" class="th">легкость сборки</td>
             <td>
                 <svg class="yes">
@@ -232,15 +254,15 @@
                 </svg>
             </td>
         </tr>
-        <tr class="text-center next">
+        <tr class="center">
             <td scope="row" class="th">релевантность</td>
             <td>
                 <svg class="no">
                     <use xlink:href="#no"></use>
                 </svg>
             </td>
-            <td></td>
-            <td></td>
+            <td>?</td>
+            <td>?</td>
             <td>
                 <svg class="yes">
                     <use xlink:href="#yes"></use>
@@ -278,7 +300,7 @@
             height: 20px;
         }
 
-        .text-center, .slide th {
+        .slide th {
             text-align: center;
         }
     </style>
@@ -286,7 +308,7 @@
 
 <section class="slide">
     <pre class="smaller-code">
-         <code><mark class="important">&lt;svg</mark> width="0" height="0" style="display: none;"></code>
+         <code><mark class="important">&lt;svg</mark> style="display: none;"></code>
          <code>  <mark>&lt;symbol id="loupe" viewBox="0 0 15.7188 15.7188"&gt;</mark></code>
          <code>    &lt;title&gt;loupe&lt;/title&gt;</code>
          <code>    &lt;path d="M6 12a6 6 0 1 1 6-6 6.007 6.007 0 0 1-6 6zM6 ...</code>
@@ -297,21 +319,16 @@
          <code>  <mark>&lt;/symbol&gt;</mark></code>
          <code><mark class="important">&lt;/svg&gt;</mark></code>
     </pre>
-
-    <style>
-        .smaller-code {
-            font-size: 20px;
-        }
-    </style>
 </section>
 
 <section class="slide">
-    <br>
     <pre>
+         <div><b>Спрайт добавлен инлайн:</b></div>
          <code>&lt;svg width="16" height="16" class="custom-icon"&gt;</code>
          <code>  <mark>&lt;use xlink:href="#tick"&gt;&lt;/use&gt;</mark></code>
          <code>&lt;/svg&gt;</code>
-         <code><br></code>
+         <br>
+         <div><b>Спрайт во внешнем файле:</b></div>
          <code>&lt;svg width="16" height="16" class="custom-icon"&gt;</code>
          <code>  <mark>&lt;use xlink:href="icons.svg#tick"&gt;&lt;/use&gt;</mark></code>
          <code>&lt;/svg&gt;</code>
@@ -344,7 +361,7 @@
          <code><br></code>
         <code>&lt;path <mark>fill</mark>="#f41" ... /&gt;</code>
          <code><br></code>
-        <code>&lt;path style="<mark>fill</mark>: #f41; <mark>stroke</mark>: #f41;" ... /&gt;</code>
+        <code>&lt;path <mark>style</mark>="<mark>stroke</mark>: #f41; <mark>fill</mark>: #f41;" ... /&gt;</code>
     </pre>
 </section>
 
@@ -361,12 +378,11 @@
             <div class="center">форма - fill</div>
         </div>
     </div>
+</section>
 
-    <style>
-        .center {
-            text-align: center;
-        }
-    </style>
+<section class="slide">
+    <br><br>
+    <img src="./pictures/shadow-dom.jpg" width="900" alt="Shadow DOM">
 </section>
 
 <section class="slide">
@@ -384,19 +400,6 @@
         </svg>
         Только глобально
     </p>
-
-    <style>
-        .alert-message {
-            display: flex;
-            align-items: center;
-            color: #e2574c;
-            font-weight: 700;
-        }
-
-        .alert-message svg {
-            margin-right: 10px;
-        }
-    </style>
 </section>
 
 <section class="slide">
@@ -433,49 +436,28 @@
 </section>
 
 <section class="slide">
-    <h2>Или</h2>
+    <h2>Удалить атрибуты стилей</h2>
     <div class="center" style="position:relative;">
-        <img src="./pictures/trash.svg" width="300" alt="">
-        <div class="fill">fill</div>
-        <div class="stroke">stroke</div>
+        <br>
+        <img src="./pictures/trash-styles.svg" width="200" alt="">
     </div>
-
-    <style>
-        .fill, .stroke {
-            position: absolute;
-            font-weight: 700;
-            font-size: 36px;
-            color: #e2574c;
-        }
-
-        .fill {
-            left: 390px;
-            top: 100px;
-        }
-
-        .stroke {
-            left: 375px;
-            top: 140px;
-        }
-    </style>
 </section>
 
 <section class="slide">
     <h2>Какие проблемы решает svg-спрайт</h2>
     <ul>
-        <li>меньше запросов к серверу (или вообще без них)</li>
-        <li>компактный код, легкое переиспользование иконок</li>
+        <li>оптимизация скорости загрузки</li>
+        <li>компактность код, легкое переиспользование иконок</li>
         <li>возможность управлять цветом иконки</li>
-        <li>кеширование</li>
-        <li>семантика</li>
+        <li>соответствие способа</li>
     </ul>
 </section>
 
 <section class="slide">
     <h2>Какие проблемы создаёт svg-спрайт</h2>
     <ul>
+        <li>ограничения по программному изменению иконки</li>
         <li>сложная сборка</li>
-        <li>ограничения по работе с цветом иконки</li>
     </ul>
 </section>
 
@@ -487,6 +469,13 @@
         <li>Gulp: <a href="https://github.com/jkphl/gulp-svg-sprite">gulp-svg-sprite</a></li>
         <li>Vue CLI: <a href="https://github.com/swisnl/vue-cli-plugin-svg-sprite">vue-cli-plugin-svg-sprite</a></li>
         <li>Полифилл: <a href="https://github.com/jonathantneal/svg4everybody">svg4everybody</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Полезные ссылки</h2>
+    <ul>
+        <li><a href=""></a></li>
     </ul>
 </section>
 
