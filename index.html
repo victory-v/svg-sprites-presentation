@@ -323,13 +323,21 @@
 
 <section class="slide">
     <h2>Вставка на страницу</h2>
-    <br>
+
     <div class="columns two">
         <div>
             <h3>Инлайн</h3>
+            <ul>
+                <li>без дополнительных запросов</li>
+                <li>не закешировать</li>
+            </ul>
         </div>
         <div>
             <h3>Из внешнего файла</h3>
+            <ul>
+                <li>1 запрос к серверу</li>
+                <li>можно закешировать</li>
+            </ul>
         </div>
     </div>
 </section>
@@ -396,15 +404,20 @@
 </section>
 
 <section class="slide">
-     <pre>
-        <code><mark>.svg-icon</mark> {</code>
-        <code>  fill: #f41;</code>
-        <code>}</code>
-    </pre>
+    <img src="./pictures/shadow-dom.jpg" width="900" alt="Shadow DOM" class="cover width">
 </section>
 
 <section class="slide">
-    <img src="./pictures/shadow-dom.jpg" width="900" alt="Shadow DOM" class="cover width">
+     <pre>
+         <code>&lt;svg width="16" height="16" class="custom-icon"&gt;</code>
+         <code>  &lt;use xlink:href="#tick"&gt;&lt;/use&gt;</code>
+         <code>&lt;/svg&gt;</code>
+    </pre>
+    <pre>
+        <code>.custom-icon {</code>
+        <code>  fill: #f41;</code>
+        <code>}</code>
+    </pre>
 </section>
 
 <section class="slide">
@@ -412,7 +425,7 @@
 
     <pre>
         <code><mark>path</mark> {</code>
-        <code>  fill: <mark>inherit</mark>;</code>
+        <code>  <span class="hljs-built_in"></span>fill: <mark>inherit</mark>;</code>
         <code>  stroke: <mark>inherit</mark>;</code>
         <code>}</code>
     </pre>
@@ -428,12 +441,12 @@
     <h2>currentColor</h2>
 
     <pre>
-            <code>&lt;path <mark>fill="currentColor"</mark> ... /&gt;</code>
-            <code><br></code>
-            <code>svg {</code>
-            <code>  <mark>color</mark>: #f41;</code>
-            <code>}</code>
-        </pre>
+        <code>&lt;path <mark>fill="currentColor"</mark> ... /&gt;</code>
+        <br>
+        <code>svg {</code>
+        <code>  <mark>color</mark>: #f41;</code>
+        <code>}</code>
+    </pre>
 </section>
 
 <section class="slide">
@@ -441,7 +454,7 @@
 
     <pre class="smaller-code">
             <code>&lt;path <mark>fill="var(--pathColor)"</mark> ... /&gt;</code>
-            <code><br></code>
+            <br>
             <code>svg {</code>
             <code>  --pathColor: #f41;</code>
             <code>}</code>
@@ -497,7 +510,14 @@
 <section class="slide">
     <h2>Полезные ссылки</h2>
     <ul>
-        <li><a href=""></a></li>
+        <li><a target="_blank" href="https://learn.javascript.ru/shadow-dom">Подробнее о Shadow DOM</a></li>
+        <li><a target="_blank"
+                href="https://webbeaver.ru/future/caching-svg-sprite-in-localstorage/">Кеширование SVG-спрайта в localStorage</a></li>
+        <li><a target="_blank"
+                href="http://prgssr.ru/development/oformlenie-soderzhimogo-use-v-svg-s-pomoshyu-css.html">
+            Оформление содержимого &lt;use&gt; в SVG с помощью CSS</a></li>
+        <li><a target="_blank" href="https://medium.com/web-standards/accessible-svg-icons-4d8d80b52f92">
+            Доступные SVG-иконки с инлайновыми спрайтами</a></li>
     </ul>
 </section>
 
