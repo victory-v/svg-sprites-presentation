@@ -40,7 +40,7 @@
 
 <section class="slide" id="cover">
     <div class="cover-content">
-        <h2 class="">SVG-спрайты для иконок</h2>
+        <h2>SVG-спрайты для иконок</h2>
         <p class="cover-mark">Виктория Васильева</p>
     </div>
     <figure>
@@ -72,17 +72,17 @@
 </section>
 
 <section class="slide">
-    <h2>Способы вставки svg-иконок</h2>
+    <h2>Способы вставки SVG-иконок</h2>
 
     <table>
         <tr>
             <th scope="col"></th>
-            <th>img</th>
-            <th>background</th>
-            <th>data URI</th>
-            <th>inline svg</th>
-            <th>icon font</th>
-            <th>sprite</th>
+            <th>картинка</th>
+            <th>фон</th>
+            <th>инлайн-CSS</th>
+            <th>инлайн-SVG</th>
+            <th>шрифт</th>
+            <th>спрайт</th>
         </tr>
         <tr class="center">
             <td scope="col" class="th"><span>оптимизация загрузки</span></td>
@@ -255,7 +255,7 @@
             </td>
         </tr>
         <tr class="center">
-            <td scope="row" class="th">релевантность</td>
+            <td scope="row" class="th">соответствие</td>
             <td>
                 <svg class="no">
                     <use xlink:href="#no"></use>
@@ -307,6 +307,28 @@
 </section>
 
 <section class="slide">
+    <h2>Почему не иконочный шрифт</h2>
+
+    <ul>
+        <li>Шрифт - для текста, а не графики</li>
+        <li>Проблемы с доступностью - читалки читают иконочные шрифты</li>
+        <li>Невозможно (или сложно) сделать иконки разноцветными</li>
+        <li>К шрифту применяется экранное сглаживание - теряется чёткость</li>
+        <li>Если не подгрузится, увидим крокозябры</li>
+        <li>Остаётся необходимость сборки, если иконки от дизайнера</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Преимущества шрифта перед спрайтом</h2>
+
+    <ul>
+        <li></li>
+    </ul>
+
+</section>
+
+<section class="slide">
     <pre class="smaller-code">
          <code><mark class="important">&lt;svg</mark> style="display: none;"></code>
          <code>  <mark>&lt;symbol id="loupe" viewBox="0 0 15.7188 15.7188"&gt;</mark></code>
@@ -326,17 +348,18 @@
 
     <div class="columns two">
         <div>
-            <h3>Инлайн</h3>
+            <h3>Инлайном</h3>
             <ul>
                 <li>без дополнительных запросов</li>
                 <li>не закешировать</li>
             </ul>
         </div>
         <div>
-            <h3>Из внешнего файла</h3>
+            <h3>Внешним файлом</h3>
             <ul>
                 <li>1 запрос к серверу</li>
                 <li>можно закешировать</li>
+                <li>локальная разработка только на сервере</li>
             </ul>
         </div>
     </div>
@@ -344,13 +367,13 @@
 
 
 <section class="slide" style="padding-top: 55px;">
-    <h2>Спрайт добавлен инлайн:</h2>
+    <h2>Спрайт добавлен инлайн</h2>
     <pre class="smaller-code">
          <code>&lt;svg width="16" height="16" class="custom-icon"&gt;</code>
          <code>  <mark>&lt;use xlink:href="#tick"&gt;&lt;/use&gt;</mark></code>
          <code>&lt;/svg&gt;</code>
     </pre>
-    <h2>Спрайт во внешнем файле:</h2>
+    <h2>Спрайт во внешнем файле</h2>
     <pre class="smaller-code">
          <code>&lt;svg width="16" height="16" class="custom-icon"&gt;</code>
          <code>  <mark>&lt;use xlink:href="icons.svg#tick"&gt;&lt;/use&gt;</mark></code>
@@ -421,7 +444,7 @@
 </section>
 
 <section class="slide">
-    <h2>inherit</h2>
+    <h2>Inherit</h2>
 
     <pre>
         <code><mark>path</mark> {</code>
@@ -450,7 +473,7 @@
 </section>
 
 <section class="slide">
-    <h2>Нативные CSS-переменные</h2>
+    <h2>Кастомные CSS-свойства</h2>
 
     <pre class="smaller-code">
             <code>&lt;path <mark>fill="var(--pathColor)"</mark> ... /&gt;</code>
@@ -499,11 +522,11 @@
 <section class="slide">
     <h2>Плагины</h2>
     <ul>
-        <li>Предобработка: <a href="https://github.com/svg/svgo">SVGO</a></li>
-        <li>Webpack: <a href="https://github.com/kisenka/svg-sprite-loader">svg-sprite-loader</a></li>
-        <li>Gulp: <a href="https://github.com/jkphl/gulp-svg-sprite">gulp-svg-sprite</a></li>
-        <li>Vue CLI: <a href="https://github.com/swisnl/vue-cli-plugin-svg-sprite">vue-cli-plugin-svg-sprite</a></li>
-        <li>Полифилл: <a href="https://github.com/jonathantneal/svg4everybody">svg4everybody</a></li>
+        <li>Предобработка: <a target="_blank" href="https://github.com/svg/svgo">SVGO / SVGOMG</a></li>
+        <li>Webpack: <a target="_blank" href="https://github.com/kisenka/svg-sprite-loader">svg-sprite-loader</a></li>
+        <li>Gulp: <a target="_blank" href="https://github.com/jkphl/gulp-svg-sprite">gulp-svg-sprite</a></li>
+        <li>Vue CLI: <a target="_blank" href="https://github.com/swisnl/vue-cli-plugin-svg-sprite">vue-cli-plugin-svg-sprite</a></li>
+        <li>Полифил: <a target="_blank" href="https://github.com/jonathantneal/svg4everybody">svg4everybody</a></li>
     </ul>
 </section>
 

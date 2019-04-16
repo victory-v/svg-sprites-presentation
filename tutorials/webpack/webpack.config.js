@@ -23,11 +23,10 @@ module.exports = {
             loader: 'svgo-loader',
             options: {
               plugins: [
-                {removeTitle: true},
                 {convertColors: {shorthex: false}},
-                {removeUselessStrokeAndFill:true},
-                {removeStyleElement:true},
-                {removeAttrs:{ attrs: ['fill', 'stroke'] } },
+                {removeUselessStrokeAndFill: true},
+                {removeStyleElement: true},
+                {removeAttrs: { attrs: ['fill', 'stroke'] } }
               ]
             }
           }
